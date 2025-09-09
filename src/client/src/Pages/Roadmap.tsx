@@ -87,7 +87,6 @@ function Roadmap() {
                           rel="noopener noreferrer"
                           target="_blank"
                           href="https://www.tchap.gouv.fr/"
-                          title="Tchap - nouvelle fenêtre"
                         >
                           Tchap
                           <span className="visually-hidden">
@@ -106,7 +105,6 @@ function Roadmap() {
                           rel="noopener noreferrer"
                           target="_blank"
                           href="https://partenaires.proconnect.gouv.fr/"
-                          title="Espace Partenaires ProConnect - nouvelle fenêtre"
                         >
                           Espace Partenaires
                           <span className="visually-hidden">

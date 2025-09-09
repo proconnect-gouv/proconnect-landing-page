@@ -79,7 +79,6 @@ function Accessibility() {
                 href="https://formulaire.defenseurdesdroits.fr/"
                 target="_blank"
                 rel="noreferrer noopener"
-                title="Écrire un message au Défenseur des droits - nouvelle fenêtre"
               >
                 Écrire un message au Défenseur des droits
                 <span className="visually-hidden"> - nouvelle fenêtre</span>
@@ -90,7 +89,6 @@ function Accessibility() {
                 href="https://www.defenseurdesdroits.fr/saisir/delegues"
                 target="_blank"
                 rel="noreferrer noopener"
-                title="Contacter le délégué du Défenseur des droits dans votre région - nouvelle fenêtre"
               >
                 Contacter le délégué du Défenseur des droits dans votre région
                 <span className="visually-hidden"> - nouvelle fenêtre</span>

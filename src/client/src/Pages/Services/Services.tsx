@@ -15,10 +15,10 @@ function Services() {
   return (
     <div className="fr-container">
       <h1 className="fr-h3 fr-mt-2w">Annuaire des services</h1>
-      <p className="fr-h6">
+      <h2 className="fr-h6">
         ProConnect vous donne accès à de nombreux outils et sites Internet de
         l'administration.
-      </p>
+      </h2>
       <div className="tags-container">
         <div className="tag-container">
           <Tag
