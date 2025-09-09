@@ -27,7 +27,6 @@ function Footer() {
           className="fr-footer__bottom-link"
           target="_blank"
           rel="noreferrer noopener"
-          title="Statuts des services - nouvelle fenêtre"
         >
           Statuts des services
           <span className="visually-hidden"> - nouvelle fenêtre</span>
@@ -38,7 +37,6 @@ function Footer() {
           className="fr-footer__bottom-link"
           target="_blank"
           rel="noreferrer noopener"
-          title="Devenez un FI ou FS partenaire - nouvelle fenêtre"
         >
           Devenez un FI ou FS partenaire
           <span className="visually-hidden"> - nouvelle fenêtre</span>
