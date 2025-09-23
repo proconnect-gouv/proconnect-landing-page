@@ -13,3 +13,19 @@ updates:
       - dependencies
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
+  - package-ecosystem: "npm"
+    directory: "/src/client"
+    labels:
+      - dependencies
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
