@@ -2,7 +2,7 @@
 
 ## 1. Lancer ce site localement
 
-Vous devez avoir npm installés sur votre machine.
+Vous devez avoir node v22.18 installé sur votre machine.
 
 ### 1.1. Télécharger le repo
 

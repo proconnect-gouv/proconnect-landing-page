@@ -105,5 +105,7 @@ dist
 
 /public/dsfr/
 
-# For mac 
+# For mac
 .DS_Store
+
+/.idea/
