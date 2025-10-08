@@ -13,7 +13,7 @@ function Stats() {
         <h1>Tableau de bord des statistiques ProConnect</h1>
         <iframe
           className="fr-col-12"
-          height="1200"
+          height="1400"
           src={url}
           width="100%"
           title="Tableau de bord des statistiques ProConnect"
