@@ -22,7 +22,6 @@ export function DropDownLogout() {
               className="fr-btn--icon-left fr-icon-account-circle-line fr-btn fr-btn--tertiary"
               aria-controls="name-account"
               aria-expanded="false"
-              title="Nom de la personne connectée"
             >
               {`${firstName} ${lastName}`}
             </button>

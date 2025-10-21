@@ -8,7 +8,7 @@ function WrapperLayout(props: { children: JSX.Element }) {
     <div className="app">
       <SkipLinks />
       <Header />
-      <main role="main" className="content" id="content">
+      <main role="main" id="content">
         {props.children}
       </main>
       <Footer />
