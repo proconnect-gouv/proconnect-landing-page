@@ -5,7 +5,7 @@ function Footer() {
   return (
     <DsfrFooter
       id="footer"
-      accessibility="non compliant"
+      accessibility="partially compliant"
       termsLinkProps={{
         to: "/mentions-legales",
       }}
