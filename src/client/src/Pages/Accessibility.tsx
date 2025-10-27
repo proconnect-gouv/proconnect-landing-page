@@ -5,108 +5,227 @@ function Accessibility() {
 
   return (
     <div className="fr-container fr-my-5w">
-      <div className="fr-grid-row">
-        <h1>Accessibilité</h1>
-        <p className="fr-mb-0">
-          Le site ProConnect n'est actuellement pas en conformité avec le RGAA
-          (Référentiel Général d'Amélioration de l'Accessibilité).
-        </p>
-        <p>
-          Nous n'avons pas encore réalisé d'audit d'accessibilité qui nous
-          permettrait d'identifier précisément les non-conformités.
-        </p>
-        <h2>Résultats des tests</h2>
-        <p>
-          Aucun test d'accessibilité n'a été réalisé à ce jour. Nous prévoyons
-          de mener un audit complet afin d'identifier les points d'amélioration.
-        </p>
-        <h2>Contenus non accessibles</h2>
-        <p>
-          En l'absence d'audit, nous ne pouvons pas détailler précisément les
-          contenus non conformes. Nous sommes conscients que certains éléments
-          du site peuvent présenter des difficultés d'accès pour les
-          utilisateurs en situation de handicap.
-        </p>
+      <h1>Déclaration d’accessibilité</h1>
+      <p>
+        <strong>L'Opérateur des Produits Interministériels</strong> s’engage à
+        rendre ses sites internet, intranet, extranet et ses progiciels
+        accessibles (et ses applications mobiles et mobilier urbain numérique)
+        conformément à l’article 47 de la loi n<sup>o</sup>&nbsp;2005-102 du
+        11&nbsp;février 2005.
+      </p>
 
-        <h2>Établissement de cette déclaration d'accessibilité</h2>
+      <p>
+        Cette déclaration d’accessibilité s’applique à{" "}
+        <strong>https://www.proconnect.gouv.fr/</strong>.
+      </p>
+
+      <h2>État de conformité</h2>
+      <p>
+        <strong>
+          ProConnect (site vitrine) | Contre-audit | Septembre 2025{" "}
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://www.proconnect.gouv.fr/"
+          >
+            https://www.proconnect.gouv.fr/
+          </a>
+        </strong>{" "}
+        est <strong>partiellement conforme</strong> avec le référentiel général
+        d’amélioration de l’accessibilité (RGAA).
+      </p>
+
+      <h3>Résultats des tests</h3>
+
+      <p>
+        L’audit de conformité réalisé par{" "}
+        <strong>la Brigade d'Intervention du Numérique de la DINUM</strong>{" "}
+        révèle que <strong>89&nbsp;%</strong> des critères du RGAA version 4.1.2
+        sont respectés.
+      </p>
+
+      <h2>Contenus non accessibles</h2>
+
+      <div>
         <p>
-          Cette déclaration a été établie le 13 janvier 2025 par{" "}
-          <strong>
-            la Brigade d'Intervention du Numérique (BIN) de la Direction
-            Interministérielle du numérique
-          </strong>
-          . Elle n'est pas basée sur une analyse de conformité car aucun audit
-          n'a été réalisé.
+          <strong>Composant Crisp</strong>
+          <br />
+          Ce composant contient plusieurs non-conformités.
+          <br />
+          Afin de ne pas alourdir le score sur ce seul composant externe,
+          certaines erreurs ont été regroupées :
         </p>
-        <h2>Retour d'information et contact</h2>
-        <p>
-          Si vous n’arrivez pas à accéder à un contenu ou à un service, vous
-          pouvez nous contacter pour être orienté vers une alternative
-          accessible ou obtenir le contenu sous une autre forme :
-          <ul>
-            <li>
-              Email :
-              <a href="mailto:support+federation@proconnect.gouv.fr">
-                support+federation@proconnect.gouv.fr
-              </a>
-            </li>
-            <li>
-              <p className="fr-mb-0">Adresse postale :</p>
-              <address>
-                <p className="fr-mb-0">ProConnect/DINUM</p>
-                <p className="fr-mb-0">20 avenue de Ségur</p>
-                <p className="fr-mb-0">75007 Paris</p>
-                <p className="fr-mb-0">Tel. accueil : 01.71.21.01.70</p>
-              </address>
-            </li>
-          </ul>
-          Nous tâcherons de vous répondre dans les meilleurs délais.
-        </p>
-        <h2>Voies de recours</h2>
-        <p>
-          Si vous constatez un défaut d'accessibilité vous empêchant d'accéder à
-          un contenu ou une fonctionnalité du site, et que vous nous en informez
-          mais n'obtenez pas de réponse satisfaisante, vous êtes en droit de
-          faire remonter le problème ou déposer une plainte auprès du Défenseur
-          des droits.
-        </p>
-        <p>
-          Plusieurs moyens sont à votre disposition :
-          <ul>
-            <li>
-              Formulaire de contact :{" "}
-              <a
-                href="https://formulaire.defenseurdesdroits.fr/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Écrire un message au Défenseur des droits
-                <span className="visually-hidden"> - nouvelle fenêtre</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.defenseurdesdroits.fr/saisir/delegues"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Contacter le délégué du Défenseur des droits dans votre région
-                <span className="visually-hidden"> - nouvelle fenêtre</span>
-              </a>
-            </li>
-            <li>
-              <p className="fr-mb-0">
-                Envoyer un courrier postal (gratuit, ne pas mettre de timbre) :
-              </p>
-              <address>
-                <p className="fr-mb-0">Défenseur des droits</p>
-                <p className="fr-mb-0">Libre réponse 71120</p>
-                <p className="fr-mb-0">75342 Paris CEDEX 07</p>
-              </address>
-            </li>
-          </ul>
-        </p>
+        <ul className="fr-mb-6v">
+          <li>Certains contrastes ne sont pas assez élevés</li>
+
+          <li>Les intitulés de boutons ne sont pas explicites</li>
+
+          <li>La modale n'a pas de nom accessible</li>
+
+          <li>Le focus n'est pas piégé dans la modale</li>
+
+          <li>
+            La fonctionnalité de téléchargement de fichier n'est pas accessible
+            au clavier
+          </li>
+
+          <li>
+            Les messages de statut ne sont pas restitués par les technologies
+            d'assistance
+          </li>
+
+          <li>L'ordre de tabulation peut ne pas être cohérent</li>
+        </ul>
       </div>
+
+      <h2> Établissement de cette déclaration d’accessibilité </h2>
+      <p>
+        Cette déclaration a été établie le <strong>8 septembre 2025</strong>.
+        Elle a été mise à jour le <strong>22 octobre 2025</strong>.
+      </p>
+
+      <h3>Technologies utilisées pour la réalisation de l’audit</h3>
+
+      <ul className="fr-mb-6v">
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>Javascript</li>
+        <li>Typescript</li>
+        <li>React</li>
+        <li>Express</li>
+      </ul>
+
+      <h3>Environnement de test</h3>
+
+      <p>
+        Les vérifications de restitution de contenus ont été réalisées sur la
+        base de la combinaison fournie par la base de référence du RGAA, avec
+        les versions suivantes&nbsp;:
+      </p>
+
+      <ul className="fr-mb-6v">
+        <li>Sur Ordinateur MacOS avec Safari et VoiceOver</li>
+        <li>Sur Ordinateur Windows avec Firefox et JAWS</li>
+        <li>Sur Ordinateur Windows avec Firefox et NVDA</li>
+      </ul>
+
+      <h3>Outils pour évaluer l’accessibilité</h3>
+
+      <ul className="fr-mb-6v">
+        <li>Web Developer Toolbar</li>
+        <li>HeadingsMap</li>
+        <li>ArcToolkit</li>
+        <li>WCAG Contrast checker</li>
+        <li>Inspecteur de composants</li>
+        <li>Validateur HTML du W3C</li>
+      </ul>
+
+      <h3>
+        Pages du site ayant fait l’objet de la vérification de conformité{" "}
+      </h3>
+
+      <ul className="fr-mb-6v">
+        <li>
+          Accueil <strong>https://www.proconnect.gouv.fr/</strong>
+        </li>
+        <li>
+          Feuille de route{" "}
+          <strong>https://www.proconnect.gouv.fr/feuille-de-route</strong>
+        </li>
+        <li>
+          Mentions légales{" "}
+          <strong>https://www.proconnect.gouv.fr/mentions-legales</strong>
+        </li>
+        <li>
+          Accessibilité{" "}
+          <strong>https://www.proconnect.gouv.fr/accessibilite</strong>
+        </li>
+        <li>
+          Plan du site{" "}
+          <strong>https://www.proconnect.gouv.fr/plan-du-site</strong>
+        </li>
+        <li>
+          CGU <strong>https://www.proconnect.gouv.fr/cgu#url-anchor-gdc</strong>
+        </li>
+        <li>
+          Tests de recommandations{" "}
+          <strong>https://www.proconnect.gouv.fr/recommandation-test</strong>
+        </li>
+        <li>
+          Annuaire des services{" "}
+          <strong>https://www.proconnect.gouv.fr/services</strong>
+        </li>
+        <li>
+          Statistiques <strong>https://www.proconnect.gouv.fr/stats</strong>
+        </li>
+        <li>
+          Mon compte (mode lecture){" "}
+          <strong>https://www.proconnect.gouv.fr/mon-compte</strong>
+        </li>
+      </ul>
+
+      <h2>Retour d’information et contact</h2>
+
+      <p>
+        Si vous n’arrivez pas à accéder à un contenu ou à un service, vous
+        pouvez contacter le responsable de ProConnect Fédération | Contre-audit
+        | Septembre 2025 pour être orienté vers une alternative accessible ou
+        obtenir le contenu sous une autre forme.
+      </p>
+
+      <ul className="fr-mb-6v">
+        <li>
+          Contacter{" "}
+          <strong>
+            L'Opérateur des Produits Interministériels&nbsp;:
+            support+federation@proconnect.gouv.fr
+          </strong>
+        </li>
+      </ul>
+
+      <h2>Voies de recours</h2>
+
+      <p>
+        Si vous constatez un défaut d’accessibilité vous empêchant d’accéder à
+        un contenu ou une fonctionnalité du site, que vous nous le signalez et
+        que vous ne parvenez pas à obtenir une réponse de notre part, vous êtes
+        en droit de faire parvenir vos doléances ou une demande de saisine au
+        Défenseur des droits.
+      </p>
+
+      <p>Plusieurs moyens sont à votre disposition&nbsp;:</p>
+      <ul className="fr-mb-6v">
+        <li>
+          <a
+            href="https://formulaire.defenseurdesdroits.fr/formulaire_saisine"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Écrire un message au Défenseur des droits{" "}
+            <span>nouvelle fenêtre</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.defenseurdesdroits.fr/carte-des-delegues"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Contacter le délégué du Défenseur des droits dans votre région{" "}
+            <span>nouvelle fenêtre</span>
+          </a>
+        </li>
+        <li>
+          Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre)
+          à&nbsp;:
+          <br />
+          <span>
+            Défenseur des droits
+            <br /> Libre réponse 71120
+            <br /> 75342 Paris CEDEX 07
+          </span>
+        </li>
+      </ul>
     </div>
   );
 }
