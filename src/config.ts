@@ -17,8 +17,7 @@ const config = {
   SESSION_SECRET: process.env["SESSION_SECRET"] || "",
   PCI_IDP_ID: process.env["PCI_IDP_ID"] || "",
   REDIS_URL: process.env["REDIS_URL"] || "",
-  ALLOW_INSECURE_REQUESTS:
-    process.env["ALLOW_INSECURE_REQUESTS"] === "True",
+  ALLOW_INSECURE_REQUESTS: process.env["ALLOW_INSECURE_REQUESTS"] === "True",
 };
 
 export { config };

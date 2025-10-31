@@ -1,4 +1,5 @@
 import { config } from "../config";
+import { UserInfoResponse } from "openid-client";
 
 async function buildOidcClient() {
   const client = await import("openid-client");
@@ -53,7 +54,15 @@ async function buildOidcClient() {
     return client.authorizationCodeGrant(proConnectConfig, currentUrl, params);
   }
 
-  function fetchUserInfo(access_token: string, sub: string) {
+  function fetchUserInfo(
+    access_token: string,
+    sub: string
+  ): Promise<
+    UserInfoResponse & {
+      usual_name?: string;
+      siret?: string;
+    }
+  > {
     return client.fetchUserInfo(proConnectConfig, access_token, sub);
   }
 
