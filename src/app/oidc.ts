@@ -1,10 +1,11 @@
 import { config } from "../config";
+import { UserInfoResponse } from "openid-client";
 
 async function buildOidcClient() {
   const client = await import("openid-client");
-  const configOptions = config.IS_HTTP_PROTOCOL_FORBIDDEN
-    ? undefined
-    : { execute: [client.allowInsecureRequests] };
+  const configOptions = config.ALLOW_INSECURE_REQUESTS
+    ? { execute: [client.allowInsecureRequests] }
+    : undefined;
   const proConnectConfig = await client.discovery(
     new URL(config.PC_DISCOVERY_URL),
     config.PC_CLIENT_ID,
@@ -53,7 +54,15 @@ async function buildOidcClient() {
     return client.authorizationCodeGrant(proConnectConfig, currentUrl, params);
   }
 
-  function fetchUserInfo(access_token: string, sub: string) {
+  function fetchUserInfo(
+    access_token: string,
+    sub: string
+  ): Promise<
+    UserInfoResponse & {
+      usual_name?: string;
+      siret?: string;
+    }
+  > {
     return client.fetchUserInfo(proConnectConfig, access_token, sub);
   }
 

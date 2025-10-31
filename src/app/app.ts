@@ -15,6 +15,7 @@ declare module "express-session" {
     email: string | null;
     firstName: string | null;
     lastName: string | null;
+    siret: string | null;
     isIdentityProviderPCI: boolean | null;
   }
 }

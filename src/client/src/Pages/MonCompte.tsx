@@ -20,7 +20,7 @@ function MonCompte() {
   if (!userInfo) {
     return <div></div>;
   }
-  const { isIdentityProviderPCI, lastName, email, firstName } = userInfo;
+  const { isIdentityProviderPCI, lastName, email, firstName, siret } = userInfo;
 
   return (
     <div>
@@ -59,6 +59,23 @@ function MonCompte() {
                 Email
               </Badge>
               <p className="fr-mb-2w fr-col-12 fr-col-md-7 bold">{email}</p>
+              <Badge
+                noIcon
+                severity="info"
+                className="fr-mr-0 fr-mb-1v fr-col-4 centered-content fr-mr-md-2w fr-mb-md-2w fr-col-sm-3"
+              >
+                SIRET
+              </Badge>
+              <p className="fr-mb-2w fr-col-12 fr-col-md-7 bold">
+                <a
+                  className="fr-link"
+                  href={`https://annuaire-entreprises.data.gouv.fr/etablissement/${siret}?mtm_campaign=proconnect`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {siret}
+                </a>
+              </p>
             </div>
             {isIdentityProviderPCI && (
               <a

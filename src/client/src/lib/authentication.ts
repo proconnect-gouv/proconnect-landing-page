@@ -2,6 +2,7 @@ type userInfoType = {
   firstName: string;
   lastName: string;
   email: string;
+  siret: string;
   isIdentityProviderPCI: boolean;
 };
 

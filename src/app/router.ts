@@ -64,7 +64,8 @@ async function buildRouter() {
       req.session.idToken = tokens.id_token;
       req.session.email = userinfo.email;
       req.session.firstName = userinfo.given_name;
-      req.session.lastName = userinfo.usual_name as string;
+      req.session.lastName = userinfo.usual_name;
+      req.session.siret = userinfo.siret;
       req.session.isIdentityProviderPCI = userinfo.idp_id === config.PCI_IDP_ID;
       return `${config.HOST_URL}/post-authentication`;
     })
@@ -84,8 +85,9 @@ async function buildRouter() {
   );
 
   router.get("/api/me", (req, res) => {
-    const { firstName, lastName, email, isIdentityProviderPCI } = req.session;
-    res.json({ firstName, lastName, email, isIdentityProviderPCI });
+    const { firstName, lastName, email, siret, isIdentityProviderPCI } =
+      req.session;
+    res.json({ firstName, lastName, email, siret, isIdentityProviderPCI });
   });
 
   router.get(/\/(.*)/, (_, res) => {
