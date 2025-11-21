@@ -112,15 +112,14 @@ function HomeLayout() {
 
           <div className="fr-col-12 fr-col-md-5 fr-pl-md-6w">
             <Chip className="fr-mb-2w" text="Professionnels du public" />
-            <h2 className="fr-h2 fr-mb-1w">Zoom sur la Suite Numérique</h2>
+            <h2 className="fr-h2 fr-mb-1w">Zoom sur LaSuite</h2>
             <p className="fr-mb-0">
-              En tant que membre de l'administration publique, ProConnect vous
-              donne accès à de nombreux outils pour créer, organiser et
-              collaborer.
+              En tant que membre de l'administration, ProConnect vous donne
+              accès à de nombreux outils pour créer, organiser et collaborer.
             </p>
             <p className="fr-mb-0">
-              Resana, Webinaire, Webconf, Audioconf... Autant d'outils puissants
-              à portée de main.
+              Tchap, Docs, Visio, Grist, Fichiers... Autant d'outils puissants à
+              portée de main.
             </p>
             <a
               className="fr-link"
@@ -128,7 +127,7 @@ function HomeLayout() {
               rel="noopener external noreferrer"
               href="https://lasuite.numerique.gouv.fr"
             >
-              Découvrir la Suite Numérique
+              Découvrir LaSuite
               <span className="visually-hidden"> - nouvelle fenêtre</span>
             </a>
           </div>
@@ -137,12 +136,12 @@ function HomeLayout() {
       <div className="fr-container fr-mb-16w">
         <div className="fr-grid-row fr-grid-row--gutters fr-col-12 reverse-md">
           <div className="fr-col-12 fr-col-md-6 fr-pr-md-4w">
-            <Chip className="fr-mb-2w" text="En cours de construction" />
+            <Chip className="fr-mb-2w" text="Nouveau" />
             <h2 className="fr-h2 fr-mb-1w">Certification Dirigeant</h2>
             <p>
-              Pour les professionnels du secteur privé, nous vous certifions
-              bientôt en tant que dirigeant de votre entreprise pour vos
-              démarches sécurisées.
+              Pour les professionnels du secteur privé, nous vous certifions en
+              tant que dirigeant de votre entreprise pour vos démarches
+              sécurisées.
             </p>
           </div>
           <div className="fr-col-12 fr-col-md-6 display-column ">
