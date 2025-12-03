@@ -14,24 +14,24 @@ const recommandationMapping: Record<
   Array<{ kind: "service" | "group"; title: string }>
 > = {
   fonction_publique_etat: [
-    { kind: "group", title: "Suite numérique" },
+    { kind: "group", title: "LaSuite" },
     { kind: "service", title: "Annuaire des Entreprises" },
     { kind: "service", title: "Tchap" },
     { kind: "service", title: "Datagouv" },
   ],
   fonction_publique_territoriale: [
-    { kind: "group", title: "Suite territoriale" },
+    { kind: "group", title: "LaSuite territoriale" },
     { kind: "service", title: "Annuaire des Entreprises" },
     { kind: "service", title: "Démarches Simplifiées" },
     { kind: "service", title: "Datagouv" },
   ],
   fonction_publique_hospitaliere: [
-    { kind: "group", title: "Suite numérique" },
+    { kind: "group", title: "LaSuite" },
     { kind: "service", title: "Grist" },
     { kind: "service", title: "RDV Service Public" },
   ],
   autre_structure_public: [
-    { kind: "group", title: "Suite numérique" },
+    { kind: "group", title: "LaSuite" },
     { kind: "service", title: "Annuaire des entreprises" },
     { kind: "service", title: "RDV Service Public" },
   ],

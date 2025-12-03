@@ -38,19 +38,8 @@ function Services() {
               onClick: onClickSuiteNumeriqueServices,
             }}
           >
-            Suite numérique
+            LaSuite
             {renderSelectedLabel("suiteNumerique", selectedTag)}
-          </Tag>
-        </div>
-        <div className="tag-container">
-          <Tag
-            pressed={selectedTag === "suiteTerritoriale"}
-            nativeButtonProps={{
-              onClick: onClickSuiteTerritorialeServices,
-            }}
-          >
-            Suite territoriale
-            {renderSelectedLabel("suiteTerritoriale", selectedTag)}
           </Tag>
         </div>
         <div className="tag-container">
@@ -98,14 +87,6 @@ function Services() {
     }
   }
 
-  function onClickSuiteTerritorialeServices() {
-    if (selectedTag === "suiteTerritoriale") {
-      setSelectedTag("all");
-    } else {
-      setSelectedTag("suiteTerritoriale");
-    }
-  }
-
   function computeFilteredServiceList() {
     const sortedServicesList = [...SERVICES_LIST];
     sortedServicesList.sort((serviceA, serviceB) =>
@@ -117,10 +98,6 @@ function Services() {
       case "suiteNumerique":
         return sortedServicesList.filter((service) =>
           service.categories?.includes("suiteNumerique")
-        );
-      case "suiteTerritoriale":
-        return sortedServicesList.filter((service) =>
-          service.categories?.includes("suiteTerritoriale")
         );
       case "inclusion":
         return sortedServicesList.filter((service) =>

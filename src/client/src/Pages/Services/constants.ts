@@ -1,7 +1,6 @@
 type networkType = "internet" | "RIE";
 
-type categoryType = "inclusion" | "suiteNumerique" | "suiteTerritoriale";
-
+type categoryType = "inclusion" | "suiteNumerique";
 type serviceType = {
   title: string;
   url: string;
@@ -16,13 +15,13 @@ export type { serviceType };
 const GROUPS_LIST: Array<{ title: string; description: string; url: string }> =
   [
     {
-      title: "Suite numérique",
+      title: "LaSuite",
       description:
         "Outiller les agents de l'État dans leur travail du quotidien",
       url: "https://lasuite.numerique.gouv.fr/",
     },
     {
-      title: "Suite territoriale",
+      title: "LaSuite territoriale",
       description:
         "Outiller les collectivités territoriales dans leurs besoins essentiels",
       url: "https://suiteterritoriale.anct.gouv.fr/",
@@ -37,7 +36,6 @@ const SERVICES_LIST: Array<serviceType> = [
       "Collaborer en temps réel sur vos documents, présentations et tableurs, tout en facilitant les échanges au sein de vos équipes",
     isOpenToPrivate: true,
     network: "internet",
-    categories: ["suiteNumerique"],
   },
   {
     title: "data.gouv.fr",
@@ -56,7 +54,6 @@ const SERVICES_LIST: Array<serviceType> = [
     url: "https://audioconf.numerique.gouv.fr/",
     description: "Organiser des conférences audio",
     network: "internet",
-    categories: ["suiteNumerique"],
   },
   {
     title: "Portail CISIRH RIE",
@@ -70,7 +67,6 @@ const SERVICES_LIST: Array<serviceType> = [
     description:
       "Collaborer en temps réel avec vos équipes via des réunions à distance",
     network: "internet",
-    categories: ["suiteNumerique"],
   },
   {
     title: "Annuaire des Entreprises",
@@ -92,7 +88,6 @@ const SERVICES_LIST: Array<serviceType> = [
     url: "https://www.demarches-simplifiees.fr/",
     description: "Réaliser des démarches administratives en ligne",
     isOpenToPrivate: true,
-    categories: ["suiteTerritoriale"],
     network: "internet",
   },
   {
@@ -101,7 +96,6 @@ const SERVICES_LIST: Array<serviceType> = [
     description:
       "Animer des présentations interactives avec un public à distance",
     network: "internet",
-    categories: ["suiteNumerique"],
   },
   {
     title: "Socle interministériel de logiciels libres",
@@ -115,14 +109,21 @@ const SERVICES_LIST: Array<serviceType> = [
     description:
       "Envoyer des fichiers volumineux non sensibles de manière sécurisée à un agent de l’État ou entre agents",
     network: "internet",
-    categories: ["suiteNumerique", "suiteTerritoriale"],
+    categories: ["suiteNumerique"],
+  },
+  {
+    title: "Fichiers",
+    url: "https://fichiers.numerique.gouv.fr/",
+    description:
+      "Stocker, partager et colaborer en temps réel sur vos fichiers, documents, présentations et tableurs",
+    network: "internet",
+    categories: ["suiteNumerique"],
   },
   {
     title: "RDV Service Public",
     url: "https://rdv.anct.gouv.fr",
     description:
       "Faciliter la prise des rendez-vous entre le service public et les usagers",
-    categories: ["suiteTerritoriale"],
     network: "internet",
   },
   {
@@ -282,7 +283,6 @@ const SERVICES_LIST: Array<serviceType> = [
     network: "internet",
     description:
       "Faciliter la mise à disposition et la location des espaces publics",
-    categories: ["suiteTerritoriale"],
     isOpenToPrivate: true,
   },
   {
@@ -300,7 +300,6 @@ const SERVICES_LIST: Array<serviceType> = [
     network: "internet",
     description:
       "Organiser et suivre vos projets grâce à un outil collaboratif de gestion de tâches",
-    categories: ["suiteNumerique"],
   },
   {
     title: "Aides-territoires",
@@ -308,7 +307,6 @@ const SERVICES_LIST: Array<serviceType> = [
     network: "internet",
     description:
       "Faciliter la recherche d'aides des collectivités territoriales et de leurs partenaires locaux",
-    categories: ["suiteTerritoriale"],
     isOpenToPrivate: true,
   },
   {
@@ -333,7 +331,7 @@ const SERVICES_LIST: Array<serviceType> = [
     network: "internet",
     description:
       "Communiquer en direct avec vos équipes ou partenaires grâce à des appels vidéo sécurisés",
-    categories: ["suiteNumerique", "suiteTerritoriale"],
+    categories: ["suiteNumerique"],
   },
   {
     title: "Diagoriente",
@@ -366,7 +364,6 @@ const SERVICES_LIST: Array<serviceType> = [
     network: "internet",
     description:
       "Structurer et analyser vos données dans des tableaux collaboratifs sur mesure",
-    categories: ["suiteTerritoriale"],
   },
   {
     title: "Horizon",
@@ -389,7 +386,6 @@ const SERVICES_LIST: Array<serviceType> = [
     network: "internet",
     description:
       "Piloter en équipe la sécurité de tous vos services numériques et les homologuer rapidement",
-    categories: ["suiteTerritoriale"],
     isOpenToPrivate: true,
   },
   {
@@ -413,7 +409,6 @@ const SERVICES_LIST: Array<serviceType> = [
     title: "Annuaire des collectivités",
     url: "https://collectivite.fr",
     network: "internet",
-    categories: ["suiteTerritoriale"],
     description:
       "Certifier et modifier les données présentes sur l'Annuaire des Collectivités",
   },
@@ -458,7 +453,7 @@ const SERVICES_LIST: Array<serviceType> = [
     description:
       "Améliorer la prise en charge des bénéficiaires d'accompagnement social",
     network: "internet",
-    categories: ["inclusion", "suiteTerritoriale"],
+    categories: ["inclusion"],
     isOpenToPrivate: true,
   },
   {
@@ -483,7 +478,6 @@ const SERVICES_LIST: Array<serviceType> = [
     description:
       "Faciliter la gestion et le suivi des interventions techniques dans les collectivités",
     network: "internet",
-    categories: ["suiteTerritoriale"],
     isOpenToPrivate: false,
   },
   {
@@ -492,7 +486,6 @@ const SERVICES_LIST: Array<serviceType> = [
     description:
       "Réunir en un seul endroit collectivités et État Local pour accélérer les projets et leur impact sur le territoire",
     network: "internet",
-    categories: ["suiteTerritoriale"],
     isOpenToPrivate: false,
   },
   {
@@ -501,7 +494,6 @@ const SERVICES_LIST: Array<serviceType> = [
     description:
       "Accéder à la plateforme de eLearning dédiée aux OPSNs et collectivités adhérentes du réseau Déclic",
     network: "internet",
-    categories: ["suiteTerritoriale"],
     isOpenToPrivate: false,
   },
   {
