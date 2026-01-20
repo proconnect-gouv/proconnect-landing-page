@@ -23,7 +23,7 @@
     "nodemon": "^3.1.11",
     "prettier": "^3.8.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "connect-redis": "^8.0.2",
