@@ -29,7 +29,7 @@
     "connect-redis": "^8.0.2",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "express-session": "^1.18.1",
+    "express-session": "^1.19.0",
     "ioredis": "^5.9.2",
     "openid-client": "^6.8.1"
   },
