@@ -78,9 +78,8 @@ function Roadmap() {
                 </li>
                 <li className="roadmap-item">
                   <div className="bubble">
-                    <h2 className="fr-h6 fr-mb-1w">Trimestre un 2025</h2>
+                    <h2 className="fr-h6 fr-mb-1w">Semestre un 2025</h2>
                     <ul className="roadmap-event-list">
-                      <li>Certification dirigeants pour les indépendants</li>
                       <li>
                         Nouveau fournisseur de service :{" "}
                         <a
@@ -112,18 +111,8 @@ function Roadmap() {
                           </span>
                         </a>
                       </li>
-                    </ul>
-                  </div>
-                </li>
-                <li className="roadmap-item active">
-                  <div className="bubble">
-                    <h2 className="fr-h6 fr-mb-1w">Trimestre deux 2025</h2>
-                    <span className="visually-hidden">période en cours</span>
-                    <ul className="roadmap-event-list">
                       <li>Authentification multifacteur dans ProConnect</li>
-                      <li>Certification dirigeants pour toutes et tous</li>
-                      <li>Migration de l’infrastructure cloud de ProConnect</li>
-                      <li>Support de la carte agent</li>
+                      <li>Certification dirigeant</li>
                     </ul>
                   </div>
                 </li>
@@ -132,9 +121,61 @@ function Roadmap() {
                     <h2 className="fr-h6 fr-mb-1w">Semestre deux 2025</h2>
                     <ul className="roadmap-event-list">
                       <li>
-                        Réconciliation d’identité entre Fournisseurs d'identité
+                        MFA : des premiers services utilisent ProConnect MFA.
                       </li>
-                      <li>Délégation Dirigeants</li>
+                      <li>
+                        Création d'un plan de reprise d'activité (PRA) sur une
+                        deuxième zone d'hébergement
+                      </li>
+                      <li>Compatibilité fournisseurs d'identité Entra ID</li>
+                      <li>
+                        Réconciliation d'identité lors d'un passage de
+                        ProConnect Identité vers un autre fournisseur d'identité
+                      </li>
+                      <li>Amélioration de l'accessibilité de ProConnect</li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="roadmap-item active">
+                  <div className="bubble">
+                    <h2 className="fr-h6 fr-mb-1w">Trimestre un 2026</h2>
+                    <ul className="roadmap-event-list">
+                      <li>
+                        Support du <code>siret_hint</code>
+                      </li>
+                      <li>Nouvelle interface utilisateur</li>
+                      <li>Refonte des niveaux d'identité</li>
+                      <li>
+                        Utilisation de FranceConnect comme preuve d'identité
+                        physique
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="roadmap-item">
+                  <div className="bubble">
+                    <h2 className="fr-h6 fr-mb-1w">Trimestre deux 2026</h2>
+                    <ul className="roadmap-event-list">
+                      <li>
+                        Support MFA chez tous nos fournisseurs d'identité.
+                      </li>
+
+                      <li>Migration sur une nouvelle infrastructure cloud</li>
+                      <li>
+                        Utilisation de FranceConnect+ comme preuve d'identité
+                        physique
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="roadmap-item">
+                  <div className="bubble">
+                    <h2 className="fr-h6 fr-mb-1w">
+                      Semestre deux 2026 (prévisionnel)
+                    </h2>
+                    <ul className="roadmap-event-list">
+                      <li>Début des travaux de Certification eiDAS</li>
+                      <li>Utilisation de la DSN pour certifier les employés</li>
                     </ul>
                   </div>
                 </li>
