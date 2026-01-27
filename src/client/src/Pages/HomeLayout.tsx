@@ -1,7 +1,6 @@
 import React from "react";
 import welcome from "../assets/illu_hero.webp";
 import profiling_transparent from "../assets/illu_profiling.webp";
-import suite from "../assets/illu_suite.webp";
 import illu_partners from "../assets/illu_partners.webp";
 import "./layout.css";
 import illu_certified from "../assets/illu_certified.webp";
@@ -107,35 +106,9 @@ function HomeLayout() {
       <div className="fr-container fr-mb-16w">
         <div className="fr-grid-row fr-grid-row--gutters fr-col-12">
           <div className="fr-col-12 fr-col-md-6 display-column ">
-            <img src={suite} width="100%" alt="" />
+            <img src={illu_certified} width="100%" alt="" />
           </div>
-
           <div className="fr-col-12 fr-col-md-5 fr-pl-md-6w">
-            <Chip className="fr-mb-2w" text="Professionnels du public" />
-            <h2 className="fr-h2 fr-mb-1w">Zoom sur LaSuite</h2>
-            <p className="fr-mb-0">
-              En tant que membre de l'administration, ProConnect vous donne
-              accès à de nombreux outils pour créer, organiser et collaborer.
-            </p>
-            <p className="fr-mb-0">
-              Tchap, Docs, Visio, Grist, Fichiers... Autant d'outils puissants à
-              portée de main.
-            </p>
-            <a
-              className="fr-link"
-              target="_blank"
-              rel="noopener external noreferrer"
-              href="https://lasuite.numerique.gouv.fr"
-            >
-              Découvrir LaSuite
-              <span className="visually-hidden"> - nouvelle fenêtre</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="fr-container fr-mb-16w">
-        <div className="fr-grid-row fr-grid-row--gutters fr-col-12 reverse-md">
-          <div className="fr-col-12 fr-col-md-6 fr-pr-md-4w">
             <Chip className="fr-mb-2w" text="Nouveau" />
             <h2 className="fr-h2 fr-mb-1w">Certification Dirigeant</h2>
             <p>
@@ -143,9 +116,6 @@ function HomeLayout() {
               tant que dirigeant de votre entreprise pour vos démarches
               sécurisées.
             </p>
-          </div>
-          <div className="fr-col-12 fr-col-md-6 display-column ">
-            <img src={illu_certified} width="100%" alt="" />
           </div>
         </div>
       </div>
