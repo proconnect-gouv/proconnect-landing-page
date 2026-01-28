@@ -175,7 +175,7 @@ function Roadmap() {
                     </h2>
                     <ul className="roadmap-event-list">
                       <li>Début des travaux de Certification eiDAS</li>
-                      <li>Utilisation de la DSN pour certifier les employés</li>
+                      <li>Utilisation de la <abbr title="Déclaration Sociale Nominative">DSN</abbr> pour certifier les employés</li>
                     </ul>
                   </div>
                 </li>
