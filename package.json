@@ -31,7 +31,7 @@
     "express": "^5.2.1",
     "express-session": "^1.19.0",
     "ioredis": "^5.9.2",
-    "openid-client": "^6.8.1"
+    "openid-client": "^6.8.2"
   },
   "engines": {
     "node": "^22.18.0"
