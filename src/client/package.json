@@ -28,7 +28,7 @@
     "react-lottie": "^1.2.4",
     "react-router-dom": "^6.30.3",
     "react-scroll": "^1.9.0",
-    "serve": "^14.2.5",
+    "serve": "^14.2.6",
     "typescript": "^5.2.2",
     "vite": "^6.4.1"
   },
