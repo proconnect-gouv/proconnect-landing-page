@@ -10,6 +10,11 @@ function Header() {
   const isConnected = !!userInfo;
   const quickAccessItems = [
     {
+      iconId: "fr-icon-information-fill" as const,
+      text: "Aide",
+      linkProps: { href: "https://proconnect.crisp.help/fr/" },
+    },
+    {
       iconId: "fr-icon-timer-line" as const,
       linkProps: {
         to: "/feuille-de-route",
