@@ -136,9 +136,9 @@ function Roadmap() {
                     </ul>
                   </div>
                 </li>
-                <li className="roadmap-item active">
+                <li className="roadmap-item">
                   <div className="bubble">
-                    <h2 className="fr-h6 fr-mb-1w">Trimestre un 2026</h2>
+                    <h2 className="fr-h6 fr-mb-1w">Semestre un 2026</h2>
                     <ul className="roadmap-event-list">
                       <li>
                         Support du <code>siret_hint</code>
@@ -149,21 +149,23 @@ function Roadmap() {
                         Utilisation de FranceConnect comme preuve d'identité
                         physique
                       </li>
+                      <li>Migration sur une nouvelle infrastructure cloud</li>
                     </ul>
                   </div>
                 </li>
-                <li className="roadmap-item">
+                <li className="roadmap-item active">
                   <div className="bubble">
-                    <h2 className="fr-h6 fr-mb-1w">Trimestre deux 2026</h2>
+                    <h2 className="fr-h6 fr-mb-1w">Trimestre trois 2026</h2>
                     <ul className="roadmap-event-list">
-                      <li>
-                        Support MFA chez tous nos fournisseurs d'identité.
-                      </li>
-
-                      <li>Migration sur une nouvelle infrastructure cloud</li>
                       <li>
                         Utilisation de FranceConnect+ comme preuve d'identité
                         physique
+                      </li>
+                      <li>
+                        Refonte du parcours d'authentification multifacteur
+                      </li>
+                      <li>
+                        Authentification multifacteur disponible sur ProConnect
                       </li>
                     </ul>
                   </div>
@@ -171,7 +173,7 @@ function Roadmap() {
                 <li className="roadmap-item">
                   <div className="bubble">
                     <h2 className="fr-h6 fr-mb-1w">
-                      Semestre deux 2026 (prévisionnel)
+                      Trimestre quatre 2026 (prévisionnel)
                     </h2>
                     <ul className="roadmap-event-list">
                       <li>Début des travaux de Certification eiDAS</li>
@@ -179,6 +181,10 @@ function Roadmap() {
                         Utilisation de la{" "}
                         <abbr title="Déclaration Sociale Nominative">DSN</abbr>{" "}
                         pour certifier les employés
+                      </li>
+                      <li>
+                        Espace partenaire disponible pour les configurations de
+                        production
                       </li>
                     </ul>
                   </div>
