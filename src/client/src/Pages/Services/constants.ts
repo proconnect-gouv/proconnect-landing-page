@@ -587,6 +587,14 @@ const SERVICES_LIST: Array<serviceType> = [
     network: "internet",
     isOpenToPrivate: false,
   },
+  {
+    title: "L'Assistant",
+    url: "https://ia.numerique.gouv.fr/outils-ia/assistant/",
+    description:
+      "Dialoguer avec une IA générative dans un environnement sécurisé pour vous accompagner dans vos tâches du quotidien.",
+    network: "internet",
+    isOpenToPrivate: false,
+  },
 ];
 
 const titlesToKeep = [
