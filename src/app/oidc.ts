@@ -7,7 +7,7 @@ async function buildOidcClient() {
     ? { execute: [client.allowInsecureRequests] }
     : undefined;
   const proConnectConfig = await client.discovery(
-    new URL(config.PC_DISCOVERY_URL),
+    new URL(`${config.PC_BASE_URL}/.well-known/openid-configuration`),
     config.PC_CLIENT_ID,
     {
       scopes: config.PC_SCOPES,

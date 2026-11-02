@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTitle } from "../lib/useTitle";
 
+const isXdaEnabled = import.meta.env.VITE_FEATURE_XDA_ENABLED === "True";
+
 function MonCompte() {
   const userInfo = getUserInfo();
   const navigate = useNavigate();
@@ -83,6 +85,14 @@ function MonCompte() {
                 href="https://identite.proconnect.gouv.fr/personal-information"
               >
                 Gérer le profil
+              </a>
+            )}
+            {isXdaEnabled && (
+              <a
+                className="fr-btn fr-btn--secondary fr-icon-account-circle-line fr-btn--icon-left fr-mt-2w fr-ml-2w"
+                href="/xda"
+              >
+                Consulter les demandes de connexion
               </a>
             )}
           </div>
