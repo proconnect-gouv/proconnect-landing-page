@@ -12,12 +12,13 @@ const config = {
     process.env["PC_ID_TOKEN_SIGNED_RESPONSE_ALG"] || "RS256",
   PC_USERINFO_SIGNED_RESPONSE_ALG:
     process.env["PC_USERINFO_SIGNED_RESPONSE_ALG"] || "RS256",
-  PC_DISCOVERY_URL: process.env["PC_DISCOVERY_URL"] || "",
+  PC_BASE_URL: process.env["PC_BASE_URL"] || "",
   PC_SCOPES: process.env["PC_SCOPES"] || "",
   SESSION_SECRET: process.env["SESSION_SECRET"] || "",
   PCI_IDP_ID: process.env["PCI_IDP_ID"] || "",
   REDIS_URL: process.env["REDIS_URL"] || "",
   ALLOW_INSECURE_REQUESTS: process.env["ALLOW_INSECURE_REQUESTS"] === "True",
+  VITE_FEATURE_XDA_ENABLED: process.env["VITE_FEATURE_XDA_ENABLED"] === "True",
 };
 
 export { config };

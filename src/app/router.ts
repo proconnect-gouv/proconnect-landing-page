@@ -84,6 +84,10 @@ async function buildRouter() {
     })
   );
 
+  router.get("/xda", (_, res) => {
+    res.redirect(`${config.PC_BASE_URL}/cross-device-authentication-requests`);
+  });
+
   router.get("/api/me", (req, res) => {
     const { firstName, lastName, email, siret, isIdentityProviderPCI } =
       req.session;
