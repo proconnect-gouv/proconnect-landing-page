@@ -15,7 +15,7 @@ import PostAuthentification from "../Pages/PostAuthentication";
 import PostLogout from "../Pages/PostLogout";
 import AuthenticationError from "../Pages/AuthenticationError";
 import { Accessibility } from "../Pages/Accessibility";
-
+import DocumentationAccueil from "../Pages/DocumentationUtilisateur/DocumentationAccueil";
 const router = createBrowserRouter([
   {
     errorElement: (
@@ -39,7 +39,15 @@ const router = createBrowserRouter([
             <Services></Services>
           </WrapperLayout>
         ),
-      },
+      },    
+{
+  path: "/documentation",
+  element: (
+    <WrapperLayout>
+      <DocumentationAccueil />
+    </WrapperLayout>
+  ),
+},
       {
         path: "/accessibilite",
         element: (
