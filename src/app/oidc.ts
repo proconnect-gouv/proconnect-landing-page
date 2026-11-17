@@ -6,8 +6,11 @@ async function buildOidcClient() {
   const configOptions = config.ALLOW_INSECURE_REQUESTS
     ? { execute: [client.allowInsecureRequests] }
     : undefined;
+  const discoveryUrl = new URL(
+    `${config.PC_BASE_URL}/.well-known/openid-configuration`
+  );
   const proConnectConfig = await client.discovery(
-    new URL(config.PC_DISCOVERY_URL),
+    discoveryUrl,
     config.PC_CLIENT_ID,
     {
       scopes: config.PC_SCOPES,
@@ -25,12 +28,17 @@ async function buildOidcClient() {
     buildEndSessionUrl,
   };
 
-  function buildAuthorizationUrl(params: { nonce: string; state: string }) {
+  function buildAuthorizationUrl(params: {
+    nonce: string;
+    state: string;
+    redirectUri?: string;
+  }) {
     return client
       .buildAuthorizationUrl(proConnectConfig, {
         nonce: params.nonce,
         state: params.state,
-        redirect_uri: `${config.HOST_URL}/openid/callback`,
+        redirect_uri:
+          params.redirectUri ?? `${config.HOST_URL}/openid/callback`,
         scope: config.PC_SCOPES,
         response_type: "code",
         claims: JSON.stringify({
