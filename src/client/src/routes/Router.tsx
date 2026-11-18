@@ -16,6 +16,7 @@ import PostLogout from "../Pages/PostLogout";
 import AuthenticationError from "../Pages/AuthenticationError";
 import { Accessibility } from "../Pages/Accessibility";
 import DocumentationAccueil from "../Pages/DocumentationUtilisateur/DocumentationAccueil";
+import Glossaire from "../Pages/DocumentationUtilisateur/Glossaire";
 const router = createBrowserRouter([
   {
     errorElement: (
@@ -48,6 +49,14 @@ const router = createBrowserRouter([
           </WrapperLayout>
         ),
       },
+{
+  path: "/documentation/glossaire",
+  element: (
+    <WrapperLayout>
+      <Glossaire />
+    </WrapperLayout>
+  ),
+},
       {
         path: "/accessibilite",
         element: (

@@ -31,6 +31,12 @@ const parties = [
     titre: "VIII — Assistance et bonnes pratiques",
     description: "Adopter les bons réflexes.",
   },
+
+  {
+    titre: "IX — Glossaire ProConnect",
+    description: "Comprendre les mots et expressions utilisés dans ProConnect.",
+  },
+
 ];
 
 function DocumentationAccueil() {
@@ -49,7 +55,17 @@ function DocumentationAccueil() {
       <ol>
         {parties.map((partie) => (
           <li key={partie.titre} className="fr-mb-3w">
-            <h3 className="fr-h5">{partie.titre}</h3>
+            
+<h3 className="fr-h5">
+  {partie.titre.startsWith("IX") ? (
+    <a href="/documentation/glossaire" className="fr-link">
+      {partie.titre}
+    </a>
+  ) : (
+    partie.titre
+  )}
+</h3>
+
             <p>{partie.description}</p>
           </li>
         ))}
