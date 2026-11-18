@@ -15,12 +15,16 @@ export default function DocumentationAccueil() {
         {documentationParties.map((partie) => (
           <li key={partie.numero} className="fr-mb-3w">
             <h3 className="fr-h5">
-              <Link to={partie.path}>{partie.numero} — {partie.titre}</Link>
+              <Link to={partie.path}>
+                {partie.numero} — {partie.titre}
+              </Link>
             </h3>
           </li>
         ))}
         <li className="fr-mb-3w">
-          <h3 className="fr-h5"><Link to={glossairePath}>IX — Glossaire ProConnect</Link></h3>
+          <h3 className="fr-h5">
+            <Link to={glossairePath}>IX — Glossaire ProConnect</Link>
+          </h3>
           <p>40 définitions, exemples et recherche par mots courants.</p>
         </li>
       </ol>
