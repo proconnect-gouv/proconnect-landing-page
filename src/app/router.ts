@@ -12,62 +12,84 @@ async function buildRouter() {
   const router = Express.Router();
   const oidcClient = await buildOidcClient();
 
+  const initiateAuthorization = (req: Request, redirectUri?: string) => {
+    const nonce = crypto.randomBytes(16).toString("hex");
+    const state = crypto.randomBytes(16).toString("hex");
+
+    req.session.state = state;
+    req.session.nonce = nonce;
+
+    return oidcClient.buildAuthorizationUrl({
+      nonce,
+      state,
+      redirectUri,
+    });
+  };
+
   router.get(
     "/openid/authorize",
-    buildRedirectController(async (req) => {
-      const nonce = crypto.randomBytes(16).toString("hex");
-      const state = crypto.randomBytes(16).toString("hex");
-
-      req.session.state = state;
-      req.session.nonce = nonce;
-
-      return oidcClient.buildAuthorizationUrl({
-        nonce,
-        state,
-      });
-    })
+    buildRedirectController(async (req) => initiateAuthorization(req))
   );
+
+  router.get(
+    "/xda",
+    buildRedirectController(async (req) =>
+      initiateAuthorization(req, `${config.HOST_URL}/openid/callback/xda`)
+    )
+  );
+
+  const handleCallback = async (req: Request) => {
+    const queryParams = req.query;
+    const { state } = queryParams;
+    const currentUrl = getCurrentUrl(req);
+
+    if (state !== req.session.state) {
+      throw new Error(
+        `The provided state "${state}" does not match the stored session state "${req.session.state}"`
+      );
+    }
+    if (req.session.nonce === null) {
+      throw new Error(`No nonce stored in the session`);
+    }
+    const tokens = await oidcClient.authorizationCodeGrant(currentUrl, {
+      expectedNonce: req.session.nonce,
+      expectedState: req.session.state,
+    });
+
+    req.session.nonce = null;
+    req.session.state = null;
+
+    const claims = tokens.claims();
+    if (!claims) {
+      throw new Error(`No claims returned`);
+    }
+
+    const userinfo = await oidcClient.fetchUserInfo(
+      tokens.access_token,
+      claims.sub
+    );
+
+    req.session.idToken = tokens.id_token;
+    req.session.email = userinfo.email;
+    req.session.firstName = userinfo.given_name;
+    req.session.lastName = userinfo.usual_name;
+    req.session.siret = userinfo.siret;
+    req.session.isIdentityProviderPCI = userinfo.idp_id === config.PCI_IDP_ID;
+  };
 
   router.get(
     "/openid/callback",
     buildRedirectController(async (req) => {
-      const queryParams = req.query;
-      const { state } = queryParams;
-      const currentUrl = getCurrentUrl(req);
-
-      if (state !== req.session.state) {
-        throw new Error(
-          `The provided state "${state}" does not match the stored session state "${req.session.state}"`
-        );
-      }
-      if (req.session.nonce === null) {
-        throw new Error(`No nonce stored in the session`);
-      }
-      const tokens = await oidcClient.authorizationCodeGrant(currentUrl, {
-        expectedNonce: req.session.nonce,
-        expectedState: req.session.state,
-      });
-
-      req.session.nonce = null;
-      req.session.state = null;
-
-      const claims = tokens.claims();
-      if (!claims) {
-        throw new Error(`No claims returned`);
-      }
-
-      const userinfo = await oidcClient.fetchUserInfo(
-        tokens.access_token,
-        claims.sub
-      );
-
-      req.session.idToken = tokens.id_token;
-      req.session.email = userinfo.email;
-      req.session.firstName = userinfo.given_name;
-      req.session.lastName = userinfo.usual_name;
-      req.session.siret = userinfo.siret;
-      req.session.isIdentityProviderPCI = userinfo.idp_id === config.PCI_IDP_ID;
+      await handleCallback(req);
       return `${config.HOST_URL}/post-authentication`;
+    })
+  );
+
+  router.get(
+    "/openid/callback/xda",
+    buildRedirectController(async (req) => {
+      await handleCallback(req);
+      return `${config.PC_BASE_URL}/cross-device-authentication-requests`;
     })
   );
 
