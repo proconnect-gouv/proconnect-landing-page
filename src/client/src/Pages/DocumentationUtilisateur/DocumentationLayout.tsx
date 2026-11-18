@@ -6,9 +6,13 @@ import "./documentation.css";
 
 export function DocumentationLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
-  const current = documentationParties.find((partie) => partie.path === pathname);
-  const pageTitle = current?.titre ?? (pathname === glossairePath ? "Glossaire" : "");
-  const isHome = pathname === "/documentation" || pathname === "/documentation/";
+  const current = documentationParties.find(
+    (partie) => partie.path === pathname
+  );
+  const pageTitle =
+    current?.titre ?? (pathname === glossairePath ? "Glossaire" : "");
+  const isHome =
+    pathname === "/documentation" || pathname === "/documentation/";
 
   return (
     <div className="pc-doc">

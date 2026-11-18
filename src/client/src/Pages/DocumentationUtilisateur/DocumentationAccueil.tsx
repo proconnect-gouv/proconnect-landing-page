@@ -26,9 +26,15 @@ export default function DocumentationAccueil() {
         <div className="pc-doc__feature">
           <div>
             <strong>Vous découvrez ProConnect ?</strong>
-            <p>Commencez par comprendre à quoi sert ProConnect et comment se déroule une connexion.</p>
+            <p>
+              Commencez par comprendre à quoi sert ProConnect et comment se
+              déroule une connexion.
+            </p>
           </div>
-          <Link className="fr-btn fr-btn--secondary" to={documentationParties[0].path}>
+          <Link
+            className="fr-btn fr-btn--secondary"
+            to={documentationParties[0].path}
+          >
             Découvrir ProConnect
           </Link>
         </div>
@@ -39,18 +45,28 @@ export default function DocumentationAccueil() {
               <span className="pc-doc__card-num">PARTIE {partie.numero}</span>
               <h2>{partie.titre}</h2>
               <p>{descriptions[partie.numero]}</p>
-              <span className="pc-doc__card-bottom">Lire cette rubrique <span aria-hidden="true">→</span></span>
+              <span className="pc-doc__card-bottom">
+                Lire cette rubrique <span aria-hidden="true">→</span>
+              </span>
             </Link>
           ))}
         </div>
         <div className="pc-doc__feature">
           <div>
             <strong>Besoin d’une définition ?</strong>
-            <p>Retrouvez 40 termes expliqués simplement, avec des exemples et une recherche.</p>
+            <p>
+              Retrouvez 40 termes expliqués simplement, avec des exemples et une
+              recherche.
+            </p>
           </div>
-          <Link className="fr-btn fr-btn--secondary" to={glossairePath}>Ouvrir le glossaire</Link>
+          <Link className="fr-btn fr-btn--secondary" to={glossairePath}>
+            Ouvrir le glossaire
+          </Link>
         </div>
-        <p className="pc-doc__foot">Documentation utilisateur ProConnect · Version de travail pour relecture.</p>
+        <p className="pc-doc__foot">
+          Documentation utilisateur ProConnect · Version de travail pour
+          relecture.
+        </p>
       </div>
     </DocumentationLayout>
   );
