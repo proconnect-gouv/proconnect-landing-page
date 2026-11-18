@@ -1,0 +1,44 @@
+.pc-doc{background:linear-gradient(180deg,#f5f7ff 0,#fff 360px);min-height:calc(100vh - 160px);padding-bottom:5rem;color:#161616}
+.pc-doc__hero{background:#fff;border-bottom:1px solid #e5e5e5}
+.pc-doc__hero-inner{padding-top:2rem;padding-bottom:1.75rem}
+.pc-doc__eyebrow{display:inline-flex;align-items:center;gap:.45rem;color:#000091;font-weight:700;font-size:.85rem;letter-spacing:.02em;margin:0 0 .65rem}
+.pc-doc__eyebrow:before{content:"";width:9px;height:9px;background:#6a6af4;border-radius:50%}
+.pc-doc__hero h1{font-size:clamp(1.7rem,3vw,2.65rem);line-height:1.18;margin:0 0 .8rem;max-width:800px}
+.pc-doc__hero p{max-width:720px;color:#3a3a3a;margin:0;line-height:1.6}
+.pc-doc__breadcrumb{font-size:.85rem;margin-bottom:1.3rem}
+.pc-doc__breadcrumb a{color:#000091}
+.pc-doc__grid{display:grid;grid-template-columns:minmax(210px,260px) minmax(0,1fr);gap:2.5rem;padding-top:2rem}
+.pc-doc__sidebar{position:sticky;top:1.5rem;align-self:start;max-height:calc(100vh - 3rem);overflow:auto}
+.pc-doc__sidebox{background:#fff;border:1px solid #e5e5e5;border-radius:8px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.035)}
+.pc-doc__sideheading{padding:1rem 1.1rem;font-weight:700;border-bottom:1px solid #eee;margin:0}
+.pc-doc__nav{list-style:none;margin:0;padding:.5rem}
+.pc-doc__nav li{margin:0}
+.pc-doc__nav a{display:flex;align-items:flex-start;gap:.75rem;padding:.7rem .65rem;text-decoration:none;color:#3a3a3a;font-size:.9rem;line-height:1.4;border-radius:4px}
+.pc-doc__nav a:hover{background:#f6f6f6;color:#000091}
+.pc-doc__nav a.active{background:#e3e3fd;color:#000091;font-weight:700;box-shadow:inset 3px 0 #000091}
+.pc-doc__nav-num{color:#666;min-width:1.4rem;font-weight:700}
+.pc-doc__nav a.active .pc-doc__nav-num{color:#000091}
+.pc-doc__sidefooter{padding:.8rem 1.1rem;border-top:1px solid #eee;font-size:.85rem}
+.pc-doc__sidefooter a{color:#000091}
+.pc-doc__content{min-width:0}
+.pc-doc__content>article,.pc-doc__content>.pc-doc__page{background:#fff;border:1px solid #e5e5e5;border-radius:8px;padding:clamp(1.25rem,3vw,2.5rem);box-shadow:0 6px 22px rgba(0,0,0,.035)}
+.pc-doc__content>article>h1,.pc-doc__content>.pc-doc__page>h1{font-size:clamp(1.6rem,2.5vw,2.15rem);margin-bottom:1rem}
+.pc-doc__content article h2{margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid #eee}
+.pc-doc__content article h3{margin-top:1.6rem}
+.pc-doc__content p,.pc-doc__content li{line-height:1.75}
+.pc-doc__content a{color:#000091;text-underline-offset:3px}
+.pc-doc__content :is(a,button,input,select):focus-visible{outline:3px solid #ffca00;outline-offset:3px}
+.pc-doc__cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.6rem 0}
+.pc-doc__card{display:block;min-height:155px;padding:1.4rem;background:#fff;border:1px solid #ddd;border-radius:7px;text-decoration:none!important;color:#161616!important;box-shadow:0 2px 8px rgba(0,0,0,.035);transition:border-color .15s,transform .15s}
+.pc-doc__card:hover{border-color:#000091;transform:translateY(-2px)}
+.pc-doc__card-num{display:inline-block;color:#000091;background:#e3e3fd;font-size:.8rem;font-weight:700;padding:.2rem .55rem;border-radius:3px;margin-bottom:1rem}
+.pc-doc__card h2{font-size:1.14rem;margin:0 0 .5rem;line-height:1.35}
+.pc-doc__card p{font-size:.9rem;color:#666;margin:0;line-height:1.5}
+.pc-doc__card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:1rem;font-size:.85rem;color:#000091;font-weight:700}
+.pc-doc__feature{display:flex;gap:1rem;align-items:center;background:#f5f5fe;border-left:4px solid #6a6af4;border-radius:4px;padding:1.25rem 1.4rem;margin:1.7rem 0}
+.pc-doc__feature strong{display:block;margin-bottom:.25rem}
+.pc-doc__feature p{margin:0;color:#3a3a3a;font-size:.9rem}
+.pc-doc__feature a{white-space:nowrap}
+.pc-doc__foot{border-top:1px solid #eee;margin-top:2.5rem;padding-top:1.25rem;font-size:.85rem;color:#666}
+@media(max-width:850px){.pc-doc__grid{grid-template-columns:1fr;gap:1rem}.pc-doc__sidebar{position:static;max-height:none}.pc-doc__nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.pc-doc__cards,.pc-doc__nav{grid-template-columns:1fr}.pc-doc__hero-inner{padding-top:1.3rem}.pc-doc__grid{padding-top:1rem}.pc-doc__feature{display:block}.pc-doc__feature a{display:inline-block;margin-top:.75rem}}

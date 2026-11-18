@@ -3,24 +3,33 @@ import { documentationParties, glossairePath } from "./documentationData";
 
 export function DocumentationNavigation() {
   return (
-    <nav aria-label="Navigation dans la documentation" className="fr-mb-4w">
-      <Link to="/documentation" className="fr-link fr-mb-2w">
-        Accueil de la documentation
-      </Link>
-      <ul className="fr-sidemenu__list">
+    <nav aria-label="Navigation dans la documentation" className="pc-doc__sidebox">
+      <p className="pc-doc__sideheading">Dans ce guide</p>
+      <ul className="pc-doc__nav">
+        <li>
+          <NavLink to="/documentation" end className={({ isActive }) => isActive ? "active" : ""}>
+            <span className="pc-doc__nav-num" aria-hidden="true">⌂</span>
+            Vue d’ensemble
+          </NavLink>
+        </li>
         {documentationParties.map((partie) => (
-          <li key={partie.numero} className="fr-sidemenu__item">
-            <NavLink to={partie.path} className="fr-sidemenu__link">
-              {partie.numero} — {partie.titre}
+          <li key={partie.numero}>
+            <NavLink to={partie.path} className={({ isActive }) => isActive ? "active" : ""}>
+              <span className="pc-doc__nav-num">{partie.numero}</span>
+              <span>{partie.titre}</span>
             </NavLink>
           </li>
         ))}
-        <li className="fr-sidemenu__item">
-          <NavLink to={glossairePath} className="fr-sidemenu__link">
+        <li>
+          <NavLink to={glossairePath} className={({ isActive }) => isActive ? "active" : ""}>
+            <span className="pc-doc__nav-num" aria-hidden="true">Aa</span>
             Glossaire
           </NavLink>
         </li>
       </ul>
+      <div className="pc-doc__sidefooter">
+        <Link to={glossairePath}>Un mot inconnu ? Consulter le glossaire</Link>
+      </div>
     </nav>
   );
 }
