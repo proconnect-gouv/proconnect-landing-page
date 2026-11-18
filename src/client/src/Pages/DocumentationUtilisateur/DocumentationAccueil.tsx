@@ -1,4 +1,3 @@
-
 const parties = [
   {
     titre: "I — Découvrir ProConnect",

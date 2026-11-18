@@ -39,15 +39,15 @@ const router = createBrowserRouter([
             <Services></Services>
           </WrapperLayout>
         ),
-      },    
-{
-  path: "/documentation",
-  element: (
-    <WrapperLayout>
-      <DocumentationAccueil />
-    </WrapperLayout>
-  ),
-},
+      },
+      {
+        path: "/documentation",
+        element: (
+          <WrapperLayout>
+            <DocumentationAccueil />
+          </WrapperLayout>
+        ),
+      },
       {
         path: "/accessibilite",
         element: (
